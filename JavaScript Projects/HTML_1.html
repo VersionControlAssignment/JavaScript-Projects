@@ -1,0 +1,65 @@
+<head>
+    <script src="JavaScript/JavaScript_1.js" defer></script>
+    </head>
+    <h1>What is your favorite color?</h1>
+    <h3>Pick your favorite color from this list:</h3>
+    <ul>
+        <li>Red</li>
+        <li>Yellow</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Pink</li>
+        <li>Purple</li>
+        </ul>
+        <h3>Enter your choice below:</h3>
+
+        <input id="Color_Input" type="text">
+        <button onclick="Color_Function()">Submit Color</button>
+        <p id="Output"></p>
+        
+        <h1 class="Click">This text will change!</h1>
+        <h3 class="Click">This text will not change.</h3>
+        <button onclick="Hello_World_Function()">Click me!</button>
+
+        <h3>Change the text of the first element with class="example":</h3>
+
+<div class="example">Element1</div>
+<div class="example">Element2</div>
+
+<script>
+const collection = document.getElementsByClassName("example");
+collection[0].innerHTML = "Hello World!";
+</script>
+
+<h1>Canvas Element Assignment</h1>
+
+<canvas id="myCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+    
+    <script>
+    var c = document.getElementById("myCanvas1");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World",10,50);
+    </script>
+
+<h3>Gradient Color Challenge</h3>
+
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+    
+    <script>
+    var c = document.getElementById("myCanvas2");
+    var ctx = c.getContext("2d");
+
+    // Create gradient
+
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+    </script>
